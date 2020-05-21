@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="author" content="Jamie Tomosunas">
+    <base target="_blank">
+    <!-- open all links not marked "_self" in a new tab -->
+
+    <title>Ace in the Hole</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" rel="stylesheet" type="text/css">
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/style.less" rel="stylesheet/less" type="text/css">
+    <link href="css/navigation.css" rel="stylesheet" type="text/css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.min.js"></script>
+
+</head>
+
+<body>
+        <header id="container" class="header">
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <h1 id="logo">Ace in the Hole</h1>
+            <ul class="menu">
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="registration.html">Registration</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </header>
+
+    <h1>Registration</h1>
+
+    <form id="forms" name="input" method="POST" action="http://spot.pcc.edu/cgi-bin/pccformmail.pl">
+        <input type="hidden" name="recipient" value="your-email-address@pcc.edu">
+        <label for="fullname"><h4>Name (Full name, one field): </h4></label>
+        <input type="text" name="fullname" size="20" /><br>
+        <label for="age"><h4>Age</h4></label>
+        <input type="number" name="lname" size="20" /><br>
+        <label for="role">Role</label><br>
+        <select id="role" name="role">
+            <option value="athlete">Athlete</option>
+            <option value="volunteer">Volunteer</option>
+        </select><br>
+        <label for="email">Email Address</label><br>
+        <input type="email" name="email" size="30" /><br>
+        <label for="emergency">Emergency Contact</label><br>
+        <input type="text" name="emergency" size="30" /><br>
+        <label for="enumber">Emergency Contact Number</label><br>
+        <input type="number" size="30" /><br>
+        <label for="gender">Gender Identification:</label>
+        <select id="gender" name="gender">
+        <option value="female">Female</option>
+        <option value="other">Nonbinary/Other</option>
+        <option value="male">Male</option>
+        </select><br><br>
+        <h3>Choose Events for Saturday and/or Sunday:</h3><br>
+        <label for="events1">Saturday:</label>
+        <select id="events1" name="events1">
+            <option value="long">Long Course Triathlon 7:00am</option>
+            <option value="olympic">Olympic Triathlon 7:30am</option>
+            <option value="ten">10k 7:15am</option>
+            <option value="half">Half Marathon 7:15am</option>
+        </select><br><br>
+         <label for="events2">Sunday:</label>
+        <select id="events2" name="events2">
+            <option value="sprint">Sprint Triathlon 8:00am</option>
+            <option value="try">Try-a-Tri 8:20am</option>
+            <option value="splash">Splash n Dash 12:00pm</option>
+            <option value="half">Half Marathon 7:15am</option>
+        </select><br><br>
+        <label for="special">List any special accomodations needed:</label>
+        <textarea id="w3mission" rows="5" cols="50">
+         
+        </textarea>
+
+        <br><br>
+
+
+    <input type="submit" value="Submit">
+
+    </form>
+            <footer id="designer">
+
+                <p>
+                Site design by Jamie Tomosunas, who is a student at <a href="http://www.pcc.edu" target="_blank">PCC</a>
+                </p>
+
+                <p id="contact">Jamie Tomosunas</p>
+                <a href="https://tomosaurus.webhostingforstudents.com/" target="_blank">https://tomosaurus.webhostingforstudents.com/</a>
+                <p>Copyright &copy; <?php $year = date("Y"); echo $year; ?> Ace in the Hole <br>
+                <a href="mailto:hello@aceinthehole.com">hello@aceinthehole.com</a></p>
+            </footer>
+    <?php include 'includes/footer.inc.html.php'; ?>
+
+</body>
+</html>
